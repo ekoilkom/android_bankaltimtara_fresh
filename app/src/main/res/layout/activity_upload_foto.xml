@@ -17,7 +17,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/blue"
+            android:background="@color/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay"/>
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -203,7 +203,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:text="SIMPAN DATA"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:background="@drawable/btn_login"
                     android:layout_marginTop="36dp"
                     android:textSize="16sp"/>

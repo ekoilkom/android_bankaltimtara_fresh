@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,343 +7,426 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".DetailPerjalananActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_height="?attr/actionBarSize"
         android:background="@color/blue"
-        android:elevation="0dp">
+        app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SPT-0345-08112019"
-                android:layout_marginLeft="20dp"
-                android:textColor="@color/white"
-                android:textSize="20dp"
+                android:text="DETAIL DATA PERJALANAN DINAS"
+                android:textSize="16sp"
                 android:textStyle="bold"
-                android:layout_gravity="center"/>
-        </LinearLayout>
+                android:textColor="@color/black"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"/>
 
-    </androidx.appcompat.widget.Toolbar>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15dp"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="DETAIL DATA PERJALANAN DINAS"
-            android:textSize="15dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"/>
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="5dp"
-            >
-            <LinearLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-
-                <TextView
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                >
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="INFO SPPD"
-                    android:textStyle="bold"
-                    android:layout_marginTop="15dp"/>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_height="match_parent"
+                        android:text="INFO SPPD"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="8dp"/>
 
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="wrap_content"
-                            android:text="NO"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=":"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="SPT-0345-08112019"
-                            android:layout_marginLeft="20dp"/>
-                    </LinearLayout>
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="130dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Jenis Perjalanan"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=":"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="8-Nov-2019"
-                            android:layout_marginLeft="20dp"/>
-                    </LinearLayout>
-                </LinearLayout>
+                            android:orientation="horizontal">
 
-            </LinearLayout>
+                            <TextView
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:text="NO"
+                                android:textColor="@color/black"/>
 
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="5dp"
-            android:layout_marginTop="5dp"
-            >
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="10dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=":"
+                                android:textColor="@color/black" />
 
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SPT-0345-08112019"
+                                android:textColor="@color/black"
+                                android:layout_marginLeft="20dp"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="TUJUAN PERJALANAN"
-                    android:textStyle="bold"
-                    android:layout_marginTop="15dp"/>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        </LinearLayout>
 
-                        <TextView
-                            android:layout_width="130dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Dari"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=":"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Bank KaltimTara Samarinda Pusat"
-                            android:layout_marginLeft="20dp"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                            android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="wrap_content"
-                            android:text="Tujuan"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=":"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=":Cabang Bank KaltimTara Bontang"
-                            android:layout_marginLeft="20dp"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="wrap_content"
-                            android:text="Tgl Berangkat"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=":"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="11-Nov-2019"
-                            android:layout_marginLeft="20dp"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="wrap_content"
-                            android:text="Tgl Kembali"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=":"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="15-Nov-2019"
-                            android:layout_marginLeft="20dp"/>
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="5dp"
-            android:layout_marginTop="5dp"
-            >
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="PENDAMPING"
-                    android:textStyle="bold"
-                    android:layout_marginTop="15dp"/>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="wrap_content"
-                            android:text="Pendamping 1"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=":"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Anita Mutmainah"
-                            android:layout_marginLeft="20dp"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="wrap_content"
-                            android:text="Pendamping 2"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=":"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Joko Santoso"
-                            android:layout_marginLeft="20dp"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="wrap_content"
-                            android:text="Pendamping 3"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=":"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Samsul Bahri"
-                            android:layout_marginLeft="20dp"/>
+                            <TextView
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:text="Jenis Perjalanan"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=":"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="8-Nov-2019"
+                                android:layout_marginStart="20dp"
+                                android:textColor="@color/black"/>
+                        </LinearLayout>
                     </LinearLayout>
 
                 </LinearLayout>
 
-            </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="5dp"
-            android:layout_marginTop="5dp"
-            >
-            <LinearLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-
-                <TextView
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_marginTop="16dp"
+                >
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="TRANSPORTASI"
-                    android:textStyle="bold"
-                    android:layout_marginTop="15dp"/>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                    android:orientation="vertical"
+                    android:padding="10dp">
 
-                        <TextView
-                            android:layout_width="130dp"
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="TUJUAN PERJALANAN"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Jenis Transportasi"/>
-                        <TextView
-                            android:layout_width="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="Dari"
+                                android:textColor="@color/black"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=":"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Bank KaltimTara Samarinda Pusat"
+                                android:layout_marginStart="4dp"
+                                android:textColor="@color/black"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text=":"/>
-                        <TextView
-                            android:layout_width="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="Tujuan"
+                                android:textColor="@color/black"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=":"
+                                android:textColor="@color/black"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cabang Bank KaltimTara Bontang"
+                                android:layout_marginStart="4dp"
+                                android:textColor="@color/black"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Mobil 3 Unit"
-                            android:layout_marginLeft="20dp"/>
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="Tgl Berangkat"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=":"
+                                android:textColor="@color/black"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="11-Nov-2019"
+                                android:layout_marginStart="4dp"
+                                android:textColor="@color/black"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="Tgl Kembali"
+                                android:textColor="@color/black"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=":"
+                                android:textColor="@color/black"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="15-Nov-2019"
+                                android:layout_marginStart="4dp"
+                                android:textColor="@color/black"/>
+
+                        </LinearLayout>
+
+
                     </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="5dp"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="PENDAMPING"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
                     <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="Pendamping 1"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=":"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Anita Mutmainah"
+                                android:layout_marginStart="4dp"
+                                android:textColor="@color/black"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="Pendamping 2"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=":"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Joko Santoso"
+                                android:layout_marginStart="4dp"
+                                android:textColor="@color/black"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="Pendamping 3"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=":"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Samsul Bahri"
+                                android:layout_marginStart="4dp"
+                                android:textColor="@color/black"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="5dp"
+                android:layout_marginTop="16dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="TRANSPORTASI"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:textColor="@color/black"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:text="Jenis Transportasi"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=":"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mobil 3 Unit"
+                                android:layout_marginStart="4dp"
+                                android:textColor="@color/black"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:text="Berangkat Dari"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=":"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Samarinda"
+                                android:layout_marginStart="4dp"
+                                android:textColor="@color/black"/>
+
+                        </LinearLayout><LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
@@ -351,54 +434,39 @@
                         <TextView
                             android:layout_width="130dp"
                             android:layout_height="wrap_content"
-                            android:text="Berangkat Dari"/>
+                            android:text="Sampai Ke"
+                            android:textColor="@color/black"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=":"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Samarinda"
-                            android:layout_marginLeft="20dp"/>
-                    </LinearLayout><LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="wrap_content"
-                            android:text="Sampai Ke"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=":"/>
+                            android:text=":"
+                            android:textColor="@color/black"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Hotel"
-                            android:layout_marginLeft="20dp"/>
+                            android:layout_marginStart="4dp"
+                            android:textColor="@color/black"/>
                     </LinearLayout>
+                    </LinearLayout>
+
                 </LinearLayout>
 
-            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <Button
+                android:id="@+id/btn_upload"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="VERIFIKASI DATA PERJALANAN"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_login"
+                android:layout_marginTop="50dp"
+                android:textAllCaps="false"
+                android:textSize="16sp"/>
+        </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
-        <Button
-            android:id="@+id/btn_vrf"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:text="VERIFIKASI DATA PERJALANAN"
-            android:textColor="@color/black"
-            android:background="@drawable/btn_login"
-            android:layout_marginTop="50dp"
-            android:textAllCaps="false"
-            android:textSize="16sp"/>
-    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
-
-
-</LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -12,28 +12,29 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center|top"
-        android:padding="40dp"
-        android:background="@drawable/bgopacity"
-        >
+        android:padding="40dp">
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/logo"
             android:layout_marginTop="50dp"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
+            android:textSize="28sp"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="28dp"
             android:textAlignment="center"
             android:text="Selamat Datang"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Aplikasi SPPD Bank KaltimTara Samarinda"
-            android:textSize="15dp"
+            android:textSize="14sp"
             android:textStyle="bold"
             android:textColor="@color/white"/>
 
@@ -44,16 +45,16 @@
             android:layout_marginTop="30dp"
             android:background="@drawable/style_border_6"
             android:drawableLeft="@drawable/ic_mail_icon"
-            android:drawablePadding="8dp"
+            android:drawablePadding="16dp"
             android:gravity="center|left"
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
             android:stateListAnimator="@null"
             android:hint="Email"
             android:textColorHint="#B4B4B4"
-            android:textAllCaps="false"
             android:textSize="16sp"
             tools:ignore="RtlHardcoded,UnusedAttribute" />
+
         <EditText
             android:id="@+id/edt_pass"
             android:layout_width="match_parent"
@@ -61,7 +62,7 @@
             android:layout_marginTop="15dp"
             android:background="@drawable/style_border_6"
             android:drawableLeft="@drawable/ic_lock_icon"
-            android:drawablePadding="8dp"
+            android:drawablePadding="16dp"
             android:gravity="center|left"
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
@@ -85,4 +86,5 @@
             android:textSize="16sp"/>
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

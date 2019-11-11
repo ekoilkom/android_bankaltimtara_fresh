@@ -6,29 +6,27 @@
     android:layout_height="match_parent"
     android:background="@drawable/bgsplash"
     tools:context=".SplashActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
-        android:background="@drawable/bgopacity"
         >
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/logo"/>
         <TextView
-            android:layout_width="210dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
+            android:textSize="24sp"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
             android:textAlignment="center"
-            android:text="SPPD Online bankkaltimtara"/>
+            android:text="SPPD Online \nbankkaltimtara"/>
 
     </LinearLayout>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
